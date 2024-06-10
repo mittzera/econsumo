@@ -39,6 +39,7 @@ const Calculo: React.FC = () => {
           id="quilometragem"
           value={quilometragem}
           onChange={(e) => setQuilometragem(e.target.value)}
+          placeholder='Insira a quilometragem'
           className="border p-2 w-[70%] color-black"
         />
       </div>
@@ -47,6 +48,8 @@ const Calculo: React.FC = () => {
   <input
     type="number"
     id="precoAlcool"
+    
+    placeholder='Insira o valor do álcool'
     value={precoAlcool}
     onChange={(e) => setPrecoAlcool(e.target.value)}
     className="border p-2 w-[70%]"
@@ -57,6 +60,8 @@ const Calculo: React.FC = () => {
         <label htmlFor="precoGasolina" className="block mb-2">Preço da Gasolina (por litro)</label>
         <input
           type="number"
+          
+          placeholder='Insira o valor da gasolina'
           id="precoGasolina"
           value={precoGasolina}
           onChange={(e) => setPrecoGasolina(e.target.value)}
