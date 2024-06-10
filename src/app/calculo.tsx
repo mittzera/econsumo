@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image';
+
 import { useState } from 'react';
 
 const Calculo: React.FC = () => {
@@ -21,7 +23,8 @@ const Calculo: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 ">
+    <div className="container mx-auto p-4 items-center ">
+
       <h1 className="text-2xl font-bold mb-4 flex text-center">ECOnsumo</h1>
       <div className="mb-4 ">
         <label htmlFor="quilometragem" className="block mb-2">Quilometragem por semana</label>
@@ -60,6 +63,16 @@ const Calculo: React.FC = () => {
         Calcular
       </button>
       {resultado && <p className="mt-4">O combustível mais vantajoso é: <strong>{resultado}</strong></p>}
+
+      
+      <h1 className="text-2xl font-bold mb-4 flex text-center mt-10">O que faz o ECOnsumo? </h1>
+      <h3 className="text-lg ml-5 font-bold mb-4 flex">O ECOnsumo usa o preço atual da gasolina, o preço atual do álcool, a eficiencia do combustivel do seu carro e a quantidade de quilometros rodados por semana para determinar qual o combustível mais vantajoso </h3>
+      <h1 className="text-2xl font-bold mb-4 flex text-center">Porque usar o ECOnsumo?</h1>
+      <h3 className="text-lg ml-5 font-bold mb-4 flex"> O ECOnsumo pode ser um bom aliado quando se trata de economia de combustível, visto que dada a diferença dos valores de ambos os combustíveis acabamos ficando indecisos de qual vale mais a pena abastecer nos nossos carros</h3>
+        
+      <h1 className="text-2xl font-bold mb-4 flex text-center">Quais os impactos ambientais do ECOnsumo? </h1>
+      <h3 className="text-lg ml-5 font-bold mb-4 flex"> O Econsumo ajuda a evitar gastos desnecessários com combustível, além de ajudar na eficiÊncia energética do funcionamento do seu carro</h3>
+        
     </div>
   );
 };
