@@ -40,7 +40,7 @@ const Calculo: React.FC = () => {
           value={quilometragem}
           onChange={(e) => setQuilometragem(e.target.value)}
           placeholder='Insira a quilometragem'
-          className="border p-2 w-[70%] color-black"
+          className="border p-2 w-[70%] text-black "
         />
       </div>
       <div className="mb-4">
@@ -49,10 +49,10 @@ const Calculo: React.FC = () => {
     type="number"
     id="precoAlcool"
     
-    placeholder='Insira o valor do álcool'
+    placeholder='Insira o preço do álcool'
     value={precoAlcool}
     onChange={(e) => setPrecoAlcool(e.target.value)}
-    className="border p-2 w-[70%]"
+    className="border p-2 w-[70%] text-black "
   />
 </div>
 
@@ -61,11 +61,11 @@ const Calculo: React.FC = () => {
         <input
           type="number"
           
-          placeholder='Insira o valor da gasolina'
+          placeholder='Insira o preço da gasolina'
           id="precoGasolina"
           value={precoGasolina}
           onChange={(e) => setPrecoGasolina(e.target.value)}
-          className="border p-2 w-[70%] "
+          className="border p-2 w-[70%] text-black "
         />
       </div>
       <button
@@ -78,12 +78,12 @@ const Calculo: React.FC = () => {
 
       
       <h1 className="text-2xl font-bold mb-4 flex text-center mt-10">O que faz o ECOnsumo? </h1>
-      <h3 className="text-lg ml-5 font-bold mb-4 flex">O ECOnsumo usa o preço atual da gasolina, o preço atual do álcool, a eficiencia do combustivel do seu carro e a quantidade de quilometros rodados por semana para determinar qual o combustível mais vantajoso </h3>
+      <p className="text-lg ml-5 font-bold mb-4 flex">O ECOnsumo usa o preço atual da gasolina, o preço atual do álcool, a eficiencia do combustivel do seu carro e a quantidade de quilometros rodados por semana para determinar qual o combustível mais vantajoso </p>
       <h1 className="text-2xl font-bold mb-4 flex text-center">Porque usar o ECOnsumo?</h1>
-      <h3 className="text-lg ml-5 font-bold mb-4 flex"> O ECOnsumo pode ser um bom aliado quando se trata de economia de combustível, visto que dada a diferença dos valores de ambos os combustíveis acabamos ficando indecisos de qual vale mais a pena abastecer nos nossos carros</h3>
+      <p className="text-lg ml-5 font-bold mb-4 flex"> O ECOnsumo pode ser um bom aliado quando se trata de economia de combustível, visto que dada a diferença dos valores de ambos os combustíveis acabamos ficando indecisos de qual vale mais a pena abastecer nos nossos carros</p>
         
       <h1 className="text-2xl font-bold mb-4 flex text-center">Quais os impactos ambientais do ECOnsumo? </h1>
-      <h3 className="text-lg ml-5 font-bold mb-4 flex"> O Econsumo ajuda a evitar gastos desnecessários com combustível, além de ajudar na eficiÊncia energética do funcionamento do seu carro</h3>
+      <p className="text-lg ml-5 font-bold mb-4 flex"> O Econsumo ajuda a evitar gastos desnecessários com combustível, além de ajudar na eficiÊncia energética do funcionamento do seu carro</p>
         
     </div>
   );
