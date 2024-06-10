@@ -15,13 +15,19 @@ const Calculo: React.FC = () => {
     const gasolina = parseFloat(precoGasolina);
     const km = parseFloat(quilometragem);
 
-    if (km > 100 || alcool / gasolina < 0.7) {
-      setResultado('Álcool');
-    } else {
-      setResultado('Gasolina');
-    }
-  };
+    if (!isNaN(alcool) && !isNaN(gasolina) && !isNaN(km)) {
+        if (km > 100 || alcool / gasolina < 0.7) {
+          setResultado('Álcool');
+        } else {
+          setResultado('Gasolina');
+        }
+      } else {
+        // Defina uma mensagem de erro ou tratamento para valores inválidos
+        setResultado('Por favor, insira valores válidos.');
+      }
+    };
 
+  
   return (
     <div className="container mx-auto p-4 items-center ">
 
@@ -33,19 +39,20 @@ const Calculo: React.FC = () => {
           id="quilometragem"
           value={quilometragem}
           onChange={(e) => setQuilometragem(e.target.value)}
-          className="border p-2 w-[70%]"
+          className="border p-2 w-[70%] color-black"
         />
       </div>
       <div className="mb-4">
-        <label htmlFor="precoAlcool" className="block mb-2">Preço do Álcool (por litro)</label>
-        <input
-          type="number"
-          id="precoAlcool"
-          value={precoAlcool}
-          onChange={(e) => setPrecoAlcool(e.target.value)}
-          className="border p-2 w-[70%]"
-        />
-      </div>
+  <label htmlFor="precoAlcool" className="block mb-2">Preço do Álcool (por litro)</label>
+  <input
+    type="number"
+    id="precoAlcool"
+    value={precoAlcool}
+    onChange={(e) => setPrecoAlcool(e.target.value)}
+    className="border p-2 w-[70%]"
+  />
+</div>
+
       <div className="mb-4">
         <label htmlFor="precoGasolina" className="block mb-2">Preço da Gasolina (por litro)</label>
         <input
@@ -62,7 +69,7 @@ const Calculo: React.FC = () => {
       >
         Calcular
       </button>
-      {resultado && <p className="mt-4">O combustível mais vantajoso é: <strong>{resultado}</strong></p>}
+      {resultado && <> <p className="mt-4">O combustível mais vantajoso é:</p> <h2 className="text-2xl color-blue"> <strong>{resultado}</strong></h2></>}
 
       
       <h1 className="text-2xl font-bold mb-4 flex text-center mt-10">O que faz o ECOnsumo? </h1>
